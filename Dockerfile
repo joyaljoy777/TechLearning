@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk-alpine
+FROM openjdk:18-ea-11-jdk-alpine3.15
 
 EXPOSE 8889
 
