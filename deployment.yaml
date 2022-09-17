@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: techlearn-gitactions-gke-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: techlearn-gitactions-gke-deployment
+  template:
+    metadata:
+      labels:
+        app: techlearn-gitactions-gke-deployment
+    spec:
+      containers:
+        - name: app
+          image: gcr.io/PROJECT_ID/IMAGE:TAG
+          imagePullPolicy: Always
